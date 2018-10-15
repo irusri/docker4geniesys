@@ -1,3 +1,4 @@
+
 **To BUILD**  
 docker build -t genie -f ./Dockerfile  .  
 
