@@ -41,10 +41,11 @@ RUN chmod 755 /*.sh
 ADD supporting_files/supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 ADD supporting_files/supervisord-mysqld.conf /etc/supervisor/conf.d/supervisord-mysqld.conf
 ADD supporting_files/mysqld_innodb.cnf /etc/mysql/conf.d/mysqld_innodb.cnf
-ADD supporting_files/my.cnf /etc/mysql/my.cnf
+#ADD supporting_files/my.cnf /etc/mysql/my.cnf
 
 # Allow mysql to bind on 0.0.0.0
 RUN sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
+RUN sed -i "s/.*port.*/port = 3306/" /etc/mysql/my.cnf
 
 # Set PHP timezones to Europe/London
 RUN sed -i "s/;date.timezone =/date.timezone = Europe\/London/g" /etc/php/7.2/apache2/php.ini
