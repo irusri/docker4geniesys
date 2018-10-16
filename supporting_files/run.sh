@@ -65,7 +65,7 @@ else
     echo "=> Using an existing volume of MySQL"
 fi
 
-#wget https://github.com/irusri/GenIECMS/archive/master.zip && unzip master.zip  && mv GenIECMS-master/* app && mv GenIECMS-master/.htaccess app && rm master.zip && rm -r GenIECMS-master
+wget https://github.com/irusri/GenIECMS/archive/master.zip && unzip master.zip  && mv GenIECMS-master/* app && mv GenIECMS-master/.htaccess app && rm master.zip && rm -r GenIECMS-master
 
 exec supervisord -n
 
