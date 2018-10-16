@@ -1,0 +1,3 @@
+[submodule "geniecms"]
+	path = geniecms
+	url = https://github.com/irusri/geniecms.git
