@@ -37,6 +37,9 @@ RUN phpenmod mcrypt
 ADD supporting_files/start-apache2.sh /start-apache2.sh
 ADD supporting_files/start-mysqld.sh /start-mysqld.sh
 ADD supporting_files/run.sh /run.sh
+ADD supporting_files/blastall /usr/bin/
+ADD supporting_files/formatdb /usr/bin/
+ADD supporting_files/fastacmd /usr/bin/
 RUN chmod 755 /*.sh
 ADD supporting_files/supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 ADD supporting_files/supervisord-mysqld.conf /etc/supervisor/conf.d/supervisord-mysqld.conf
