@@ -1,8 +1,8 @@
 geniesys:
   build: .
-  dockerfile: ./Dockerfile2
+  dockerfile: ./Dockerfile
   environment:
-    - MYSQL_ADMIN_PASS=mypass
+    - MYSQL_ADMIN_PASS=root
   ports:
     - "80:80"
     - "3001:3306"

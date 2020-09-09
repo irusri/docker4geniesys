@@ -58,6 +58,9 @@ sed -i "s/cfg\['blowfish_secret'\] = ''/cfg['blowfish_secret'] = '`date | md5sum
 echo "Setting up MySQL directories"
 mkdir -p /var/run/mysqld
 
+# Clone geniesys
+git clone https://github.com/irusri/geniesys.git /app/geniesys
+
 # Setup user and permissions for MySQL and Apache
 chmod -R 770 /var/lib/mysql
 chmod -R 770 /var/run/mysqld
