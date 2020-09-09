@@ -59,7 +59,15 @@ echo "Setting up MySQL directories"
 mkdir -p /var/run/mysqld
 
 # Clone geniesys
-git clone https://github.com/irusri/geniesys.git /app/geniesys
+geniefolder="/app/geniesys";
+if [ ! -d "$geniefolder" ] ; then
+    git clone https://github.com/irusri/geniesys.git $geniefolder
+    echo "cloned"
+else
+    cd "$geniefolder"
+    git pull 
+    echo "pulled"
+fi
 
 # Setup user and permissions for MySQL and Apache
 chmod -R 770 /var/lib/mysql
