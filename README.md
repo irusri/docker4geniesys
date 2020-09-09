@@ -24,7 +24,7 @@ The following commands are useful to make a development environment.
 `docker build -t geniesys -f ./Dockerfile  .`  
 `docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/geniecms:/app  -v ${PWD}/mysql:/var/lib/mysql  -e MYSQL_ADMIN_PASS="mypass" --name geniesys geniesys`  
 
-**General commands for Docker**  
+**General useful commands for Docker**  
 **To remove all containers**  
 `sudo apt-get install docker-ce docker-ce-cli containerd.io`
 
