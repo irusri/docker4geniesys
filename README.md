@@ -1,7 +1,7 @@
 Docker4GenIECMS is a set of docker images that include phusion baseimage (16.04 and 18.04 varieties) along with a LAMP stack (Apache, MySQL and PHP) to host the latest version of geniesys website. The following command will start the LAMP server and fetch the latest version of geniesys from Github repository.
 
 **To run with docker-compose**  
-`git clone https://github.com/irusri/Docker4GenIECMS.git`
+`git clone https://github.com/irusri/Docker4GenIECMS.git`  
 `docker-compose up`
 
 ***
