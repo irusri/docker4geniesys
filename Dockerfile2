@@ -1,0 +1,19 @@
+FROM genie:latest
+MAINTAINER Chanaka Mannapperuma <irusri@gmail.com>
+
+# Add GenIE-CMS
+#RUN cd /app/
+RUN wget -O master.zip https://github.com/irusri/geniesys/archive/master.zip
+RUN unzip master.zip
+RUN ln -s /geniesys-master /app/geniesys
+#RUN mv /geniesys-master /app
+RUN rm master.zip
+#RUN ls
+#RUN cd /geniesys-master/
+#COPY /geniesys-master/* /app/geniesys2/
+#RUN ls
+#RUN pwd
+#ADD geniesys-master /app/
+#RUN mv geniesys-master geniesys
+#COPY geniesys /app/geniesys 
+#RUN rm master.zip

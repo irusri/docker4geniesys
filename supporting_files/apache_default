@@ -8,8 +8,6 @@
                 AllowOverride All
                 Order allow,deny
                 allow from all
-                Options -Indexes
-                DirectoryIndex index.php index.html index.htm
         </Directory>
         <Directory /var/www/html>
                 Options Indexes FollowSymLinks MultiViews
@@ -17,8 +15,6 @@
                 AllowOverride All
                 Order allow,deny
                 allow from all
-                Options -Indexes
-                DirectoryIndex index.php index.html index.htm
         </Directory>
 
         Alias /phpmyadmin /var/www/phpmyadmin

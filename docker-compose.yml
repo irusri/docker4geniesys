@@ -1,0 +1,11 @@
+geniesys:
+  build: .
+  dockerfile: ./Dockerfile2
+  environment:
+    - MYSQL_ADMIN_PASS=mypass
+  ports:
+    - "80:80"
+    - "3001:3306"
+  volumes:
+    - ${PWD}/geniesys:/app/geniesys
+    - ${PWD}/mysql:/var/lib/mysql
