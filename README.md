@@ -12,7 +12,7 @@ The following commands might be useful when you prefer to run step by step appro
 `docker build -t geniesys -f ./Dockerfile  .`  
 
 **RUN Docker image**  
-`docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/geniecms:/app  -v ${PWD}/mysql:/var/lib/mysql  -e MYSQL_ADMIN_PASS="mypass" --name geniecms geniesys`  
+`docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/geniesys:/app  -v ${PWD}/mysql:/var/lib/mysql  -e MYSQL_ADMIN_PASS="mypass" --name geniesys geniesys`  
 
 
 **To make a development environment**   
@@ -22,7 +22,7 @@ The following commands are useful to make a development environment.
 `cd docker4geniesys`  
 `git submodule add -f https://github.com/irusri/geniesys.git`  
 `docker build -t geniesys -f ./Dockerfile  .`  
-`docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/geniecms:/app  -v ${PWD}/mysql:/var/lib/mysql  -e MYSQL_ADMIN_PASS="mypass" --name geniesys geniesys`  
+`docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/geniesys:/app  -v ${PWD}/mysql:/var/lib/mysql  -e MYSQL_ADMIN_PASS="mypass" --name geniesys geniesys`  
 
 **General useful commands for Docker**  
 **To remove all containers**  
