@@ -5,7 +5,7 @@ Docker4GenIECMS is a set of docker images that include phusion baseimage (16.04 
 `docker-compose up`
 
 ***
-**To run without docker-compose**
+**To run without docker-compose**  
 The following commands might be useful when you prefer to run step by step approach without using the docker-compose.
 
 **Build Docker image using the Dockerfile**  
@@ -24,7 +24,7 @@ The following commands are useful to make a development environment.
 `docker build -t genie -f ./Dockerfile  .`  
 `docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/geniecms:/app  -v ${PWD}/mysql:/var/lib/mysql  -e MYSQL_ADMIN_PASS="mypass" --name geniesys genie`  
 
-**General commands for Docker** 
+**General commands for Docker**  
 **To remove all containers**  
 `sudo apt-get install docker-ce docker-ce-cli containerd.io`
 
