@@ -85,3 +85,9 @@ VOLUME  ["/var/lib/mysql", "/app" ]
 EXPOSE 80 3306
 CMD ["/run.sh"]
 
+# Add GenIE-CMS
+#RUN wget https://github.com/irusri/geniesys/archive/master.zip
+#RUN unzip master.zip
+#RUN mv geniesys-master geniesys
+#COPY geniesys /app/geniesys 
+#RUN rm master.zip
