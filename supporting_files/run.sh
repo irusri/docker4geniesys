@@ -77,7 +77,7 @@ fi
 # Setup user and permissions for MySQL and Apache
 chmod -R 770 /var/lib/mysql
 chmod -R 770 /var/run/mysqld
-chmod -R 777 /app/geniesys/genie_files
+
 
 if [ -n "$VAGRANT_OSX_MODE" ];then
     echo "Setting up users and groups"
@@ -95,6 +95,8 @@ echo "Allowing Apache/PHP to write to MySQL"
 chown -R www-data:staff /var/lib/mysql
 chown -R www-data:staff /var/run/mysqld
 chown -R www-data:staff /var/log/mysql
+chown -R www-data:www-data /app/geniesys/genie_files
+chmod -R 777 /app/geniesys/genie_files
 
 if [ -e /var/run/mysqld/mysqld.sock ];then
     echo "Removing MySQL socket"
