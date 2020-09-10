@@ -61,11 +61,14 @@ mkdir -p /var/run/mysqld
 # Clone geniesys
 geniefolder="/app/geniesys";
 if [ ! -d "$geniefolder" ] ; then
+    git init
     git clone https://github.com/irusri/geniesys.git $geniefolder
     echo "cloned"
 else
     cd "$geniefolder"
-    git pull 
+    git remote add origin https://github.com/irusri/geniesys.git
+    git fetch
+    git pull origin master 
     echo "pulled"
 fi
 
@@ -121,3 +124,6 @@ fi
 
 echo "Starting supervisord"
 exec supervisord -n
+
+
+
