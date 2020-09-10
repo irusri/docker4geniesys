@@ -1,8 +1,8 @@
 docker4geniesys is a set of docker images that include phusion baseimage along with a LAMP stack (Apache, MySQL and PHP) to host the latest version of geniesys website. The following command will start the LAMP server and fetch the latest version of geniesys from Github repository.
 
 **To run with docker-compose**  
-`git clone https://github.com/irusri/docker4geniesys.git` 
-`cd docker4geniesys` 
+`git clone https://github.com/irusri/docker4geniesys.git`   
+`cd docker4geniesys`   
 `docker-compose up`
 
 ***
