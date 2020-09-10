@@ -59,14 +59,16 @@ echo "Setting up MySQL directories"
 mkdir -p /var/run/mysqld
 
 # Clone geniesys
+#mkdir -p /app/geniesys
 geniefolder="/app/geniesys";
-if [ ! -d "$geniefolder" ] ; then
-    git init
-    git clone https://github.com/irusri/geniesys.git $geniefolder
+if [ ! -d $geniefolder/.git ] ; then
+    #git init
+    git clone https://github.com/irusri/geniesys $geniefolder
     echo "cloned"
 else
     cd "$geniefolder"
-    git remote add origin https://github.com/irusri/geniesys.git
+    #git init
+    git remote add origin https://github.com/irusri/geniesys
     git fetch
     git pull origin master 
     echo "pulled"
@@ -75,6 +77,7 @@ fi
 # Setup user and permissions for MySQL and Apache
 chmod -R 770 /var/lib/mysql
 chmod -R 770 /var/run/mysqld
+chmod -R 777 /app/geniesys/genie_files
 
 if [ -n "$VAGRANT_OSX_MODE" ];then
     echo "Setting up users and groups"
