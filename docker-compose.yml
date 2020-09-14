@@ -1,6 +1,7 @@
 geniesys:
   build: .
   dockerfile: ./Dockerfile
+  restart: always
   environment:
     - MYSQL_ADMIN_PASS=mypass
   ports:

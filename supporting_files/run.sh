@@ -59,7 +59,6 @@ echo "Setting up MySQL directories"
 mkdir -p /var/run/mysqld
 
 # Clone geniesys
-#mkdir -p /app/geniesys
 geniefolder="/app/geniesys";
 if [ ! -d $geniefolder/.git ] ; then
     #git init
