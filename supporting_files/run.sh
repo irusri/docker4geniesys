@@ -104,7 +104,10 @@ if [ -e /var/run/mysqld/mysqld.sock ];then
 fi
 
 echo "Install task-spooler"
-apt install task-spooler
+apt-get install task-spooler
+
+echo "Install xsltproc"
+apt-get install -y xsltproc
 
 echo "Editing MySQL config"
 sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
