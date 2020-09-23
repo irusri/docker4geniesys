@@ -5,7 +5,7 @@ geniesys:
   environment:
     - MYSQL_ADMIN_PASS=mypass
   ports:
-    - "82:80"
+    - "80:80"
     - "3002:3306"
   volumes:
     - ${PWD}/geniesys:/app/geniesys
