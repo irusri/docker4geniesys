@@ -96,11 +96,15 @@ chown -R www-data:staff /var/run/mysqld
 chown -R www-data:staff /var/log/mysql
 chown -R www-data:www-data /app/geniesys/genie_files
 chmod -R 777 /app/geniesys/genie_files
+chmod -R 777 /app/geniesys/plugins/blast/tmp
 
 if [ -e /var/run/mysqld/mysqld.sock ];then
     echo "Removing MySQL socket"
     rm /var/run/mysqld/mysqld.sock
 fi
+
+echo "Install task-spooler"
+apt install task-spooler
 
 echo "Editing MySQL config"
 sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
