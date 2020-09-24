@@ -109,6 +109,16 @@ apt-get install task-spooler
 echo "Install xsltproc"
 apt-get install -y xsltproc
 
+echo "Installing perl modules"
+apt-get install -y build-essential
+yes |  perl -MCPAN -e 'install DBI'
+apt-get install  -y bioperl-run
+yes |  perl -MCPAN -e 'install Bio::Graphics'
+yes |  perl -MCPAN -e 'install Bio::FeatureIO'
+yes |  perl -MCPAN -e 'install Bio::SearchIO::blastxml'
+echo "installation of ferl modules completed"
+
+
 echo "Editing MySQL config"
 sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
 sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
