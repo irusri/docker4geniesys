@@ -7,7 +7,7 @@ docker4geniesys is a set of docker images that include phusion baseimage along w
 
 ***
 **To run without docker-compose**  
-The following commands might be useful when you prefer to run step by step approach without using the docker-compose.
+The following commands might be useful when you prefer to run step by step without using the docker-compose.
 
 **Build Docker image using the Dockerfile**  
 `docker build -t geniesys -f ./Dockerfile  .`  
