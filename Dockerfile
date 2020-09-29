@@ -76,7 +76,7 @@ RUN apt-get install -y build-essential
 RUN apt-get install task-spooler
 RUN apt-get install -y xsltproc
 RUN apt-get install  -y bioperl-run
-RUN apt-get install genometools
+#RUN apt-get install genometools
 
 RUN yes |  perl -MCPAN -e 'install DBI'
 RUN yes |  perl -MCPAN -e 'install Bio::Graphics'
