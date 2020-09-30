@@ -3,3 +3,5 @@ mysql
 .gitmodules
 .vscode
 test.sh
+supervisord.log
+supervisord.pid
