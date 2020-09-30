@@ -73,13 +73,11 @@ RUN a2enmod rewrite
 # Configure /app folder with sample app
 RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
 
-RUN apt-get update && \
+RUN apt-get update
 RUN apt-get install task-spooler
 RUN apt-get install -y build-essential
 RUN apt-get install -y xsltproc
 RUN apt-get install  -y bioperl-run
-#RUN apt-get install genometools
-
 
 RUN yes |  perl -MCPAN -e 'install DBI'
 RUN yes |  perl -MCPAN -e 'install Bio::Graphics'
