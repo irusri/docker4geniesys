@@ -8,5 +8,8 @@ services:
     environment:
       - "MYSQL_ADMIN_PASS=mypass"
     volumes: 
-      - "${PWD}/geniesys:/app/geniesys"  
-      - "${PWD}/mysql:/var/lib/mysql"
+      - "geniesys:/app/geniesys"
+      - "mysql:/var/lib/mysql"
+volumes:
+  geniesys:
+  mysql:
