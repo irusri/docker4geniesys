@@ -39,3 +39,7 @@ The following commands are useful to make a development environment.
 `docker rmi -f $(docker images -q)`
  
 
+ 
+ GET http://api.plantgenie.org/genelist/get_all?name=testing_only&fingerprint=1072439978&table=genelist_potra
+
+
