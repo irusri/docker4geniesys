@@ -2,8 +2,12 @@ version: '3'
 services:
   geniesys:
     image: "irusri/docker4geniesys:latest"
-    restart: "always"
-    build: .
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
     ports:
       - "80:80"
       - "3002:3006"
