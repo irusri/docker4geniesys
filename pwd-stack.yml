@@ -1,6 +1,6 @@
 version: '3'
 services:
-  web:
+  geniesys:
     image: "irusri/docker4geniesys:latest"
     ports:
       - "80:80"
@@ -8,5 +8,5 @@ services:
     environment:
       - "MYSQL_ADMIN_PASS=mypass"
     volumes: 
-      - "${PWD}/geniesys:/app/geniesys"  
-      - "${PWD}/mysql:/var/lib/mysql"
+      - "./geniesys:/app/geniesys"  
+      - "./mysql:/var/lib/mysql"
