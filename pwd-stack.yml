@@ -2,7 +2,7 @@ version: '3'
 services:
   geniesys:
     image: "irusri/docker4geniesys:latest"
-    restart: always
+    restart: "always"
     ports:
       - "80:80"
       - "3002:3006"
