@@ -61,15 +61,13 @@ mkdir -p /var/run/mysqld
 # Clone geniesys
 geniefolder="/app/geniesys";
 if [ ! -d $geniefolder/.git ] ; then
-    #git init
     git clone https://github.com/irusri/geniesys $geniefolder
     echo "cloned"
 else
-    cd "$geniefolder"
-    #git init
-    git remote add origin https://github.com/irusri/geniesys
-    git fetch
-    git pull origin master 
+    #cd "$geniefolder"
+    #git remote add origin https://github.com/irusri/geniesys
+    #git fetch
+    #git pull origin master 
     echo "pulled"
 fi
 
