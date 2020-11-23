@@ -1,49 +1,36 @@
 docker4geniesys is a set of docker images that include phusion baseimage along with a LAMP stack (Apache, MySQL and PHP) to host the latest version of geniesys website. The following command will start the LAMP server and fetch the latest version of geniesys from Github repository.
 
 
+Docker installation can be tested or run in several ways.
+
+**1.\) Run using [Play with Docker](https://labs.play-with-docker.com/)**  
+The quickest way to test the GenIE-Sys, it takes only a few minutes
+
 [![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/irusri/docker4geniesys/master/pwd-stack.yml)
 
+**2.\) Run with [already built in Docker image](https://hub.docker.com/r/irusri/docker4geniesys)**                                                                          
+The fastest way to run the GenIE-Sys locally or your own server
+```text
+docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/genie:/app -v ${PWD}/mysql:/var/lib/mysql -e MYSQL_ADMIN_PASS="mypass" --name geniesys irusri/docker4geniesys
+```
 
-**To run with docker-compose**  
-`git clone https://github.com/irusri/docker4geniesys.git`   
-`cd docker4geniesys`   
-`docker-compose up`
+**3.\) Build image locally using [Dockerfile](https://github.com/irusri/docker4geniesys) and run.**  
+This is quite slow since you have to build the image locally
 
-***
-**To run without docker-compose**  
-The following commands might be useful when you prefer to run step by step without using the docker-compose.
+```text
+git clone https://github.com/irusri/docker4geniesys.git  
+cd docker4geniesys  
+docker-compose up
+```
 
-**Build Docker image using the Dockerfile**  
-`docker build -t geniesys -f ./Dockerfile  .`  
+You can access the MySQL database using `mysql -u admin -pmypass -h localhost -P 3308` or using `http://localhost/phpmyadmin`. As you may noticed here `admin` is the default MySQL username and `mypass` is the default  password. You can change the default password in `docker-compose.yml file.`
 
-**RUN Docker image**  
-`docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/geniesys:/app  -v ${PWD}/mysql:/var/lib/mysql  -e MYSQL_ADMIN_PASS="mypass" --name geniesys geniesys`  
-
-
-**To make a development environment**   
-The following commands are useful to make a development environment.
-
-`git clone https://github.com/irusri/docker4geniesys.git`  
-`cd docker4geniesys`  
-`git submodule add -f https://github.com/irusri/geniesys.git`  
-`docker build -t geniesys -f ./Dockerfile  .`  
-`docker run --rm -i -t -p "80:80" -p "3308:3306" -v ${PWD}/geniesys:/app  -v ${PWD}/mysql:/var/lib/mysql  -e MYSQL_ADMIN_PASS="mypass" --name geniesys geniesys`  
-
-**General (useful) commands for Docker**  
-**To remove all containers**  
-`sudo apt-get install docker-ce docker-ce-cli containerd.io`
-
-**To remove all containers**  
-`docker rm -f $(docker ps -a -q)` 
-  
-**To See/Remove all volumes respectively**  
-`docker volume ls/prune`  
-
-**To remove all images**  
-`docker rmi -f $(docker images -q)`
- 
-
- 
- GET http://api.plantgenie.org/genelist/get_all?name=testing_only&fingerprint=1072439978&table=genelist_potra
+👍  You can access the GenIE-Sys on `http://localhost/geniesys/` URL and follow the  [documentation](https://app.gitbook.com/@geniesys/s/geniesys/for-administrators/installation).
 
 
+Licence & Contributors
+======================
+
+This work is under Free and Open Source licence
+
+Contributions are welcome!
