@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/irusri/docker4geniesys.svg)](https://microbadger.com/images/irusri/docker4geniesys "Get your own image badge on microbadger.com")
+
 docker4geniesys is a set of docker images that include phusion baseimage along with a LAMP stack (Apache, MySQL and PHP) to host the latest version of geniesys website. The following command will start the LAMP server and fetch the latest version of geniesys from Github repository.
 
 
@@ -7,6 +9,7 @@ Docker installation can be tested or run in several ways.
 The quickest way to test the GenIE-Sys, it takes only a few minutes
 
 [![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/irusri/docker4geniesys/master/pwd-stack.yml)
+
 
 **2.\) Run with [already built in Docker image](https://hub.docker.com/r/irusri/docker4geniesys)**                                                                          
 The fastest way to run the GenIE-Sys locally or your own server
