@@ -1,5 +1,5 @@
 image:
-  file: irusri/docker4geniesys
+  file: .gitpod.Dockerfile
 
 ports:
   - port: 80
