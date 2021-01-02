@@ -11,5 +11,5 @@ services:
       - "geniesys:/app/geniesys"
       - "mysql:/var/lib/mysql"
 volumes:
-  geniesys:
-  mysql:
+  geniesys:{}
+  mysql:{}
